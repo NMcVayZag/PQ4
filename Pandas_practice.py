@@ -36,3 +36,17 @@ print(pd.Series({2:'a', 1:'b', 3:'c'}))
 print(pd.Series({2:'a', 1:'b', 3:'c'}, index=[3,2]))
 
 #THE PANDAS DATAFRAME OBJECT
+area_dict = {'California': 423967, 'Texas': 695662, 'New York': 141297,
+             'Florida': 170312, 'Illinois': 149995}
+area = pd.Series(area_dict)
+print(area)
+states = pd.DataFrame({'population': population,
+                       'area': area})
+print(states)
+print(states.index) #grab all indexes from dataframe
+print(states.columns) #grab all collumns from dataframe
+print(states['area']) #grab the area collumn with indexes from database
+
+#create database with only the population figures
+pop_db = pd.DataFrame(population, columns = ['Population'])
+print(pop_db)
