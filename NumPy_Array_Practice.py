@@ -4,14 +4,14 @@ x = list(range(10))
 print(x)
 
 #make a numpy ndarray
-x = np.array(x)
+x = np.array(x)  #they dont seperate values with commas as a list would
 print(x)
 print(type(x))
 
 # 2D
 x = [[1,2,3],[4,5,6]]
 print(x)
-x = np.array(x)
+x = np.array(x) #np arrays will organize a 2d list into a table
 print(x)
 print(x.ndim)
 print(x.shape) #rows x collumns 
@@ -21,7 +21,7 @@ x_floats = x.astype(np.float)
 print(x_floats)
 print(x_floats.dtype) #numpys float designation
 
-x = np.arange(2,10,.5) #start, stop, step
+x = np.arange(2,10,.5) #start, stop, step -arange is also exclusive
 print(x)
 
 x = np.ones((4,5))
@@ -30,12 +30,14 @@ print(x)
 x = np.zeros((4,5))
 print(x)
 
-x = np.full(10, 5.5)
+x = np.full(10, 5.5) #10 accounts of 5.5 in a array
 print(x)
 
 #indexing
 x = np.ones((4,5))
 print(x[0][0], x[0, 0])   #these print indexing are equivalent
+
+print("\n")
 
 #vectorization #IMPORTANT
 #applying an operation to all elements in a array without using a loop
@@ -55,7 +57,7 @@ print(x)
 print(y)
 z = x + y #wala
 print(z)
-
+print()
 #relational operators are also vectorized with numpy
 m_names = np.array(["Mary", "Michael", "Margaret", "Mary", "Marcus", "Molly"])
 m_ages = np.array([   28,      72,         12,         34,      40,       68])
